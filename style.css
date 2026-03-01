@@ -1,0 +1,136 @@
+iframe {
+	
+height:100vh;
+width:100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
+	body {
+    background-color: #000000;
+    color: #ff007f;
+}
+
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+.presentation {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.presentation img {
+  width: 120px;   /* plus fiable que % ici */
+  height: auto;
+}
+
+.texte-presentation {
+  flex: 1;
+  color:#ff007f;
+}
+/*Vous pouvez modifier la couleur de .texte de présentation*/
+th { width: 200px;}
+ul { list-style-type: square; }
+
+#entete-de-page {
+	padding: 5px;
+	height: 100px;
+	background-color:#000000;
+	font-size: 32px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+}
+#bloc-menu {
+    height: 36px;
+    background-color: #000000;
+    float: center; /* Attention, float: center n'existe pas vraiment, mais on garde ton code */
+    text-align: center; /* Ajoute ça pour centrer tes textes */
+}
+
+/* C'EST CETTE PARTIE QUI CHANGE LA COULEUR DES LIENS DU MENU */
+#bloc-menu a {
+    color: #ff007f !important; /* Ton rose flashy */
+    text-decoration: none;
+    margin: 0 10px; /* Espace un peu les noms du menu */
+    font-weight: bold;
+}
+
+}
+#contenu {
+    overflow: hidden; /* Important pour que l'image ne dépasse pas du bloc */
+    padding: 20px;
+    background-color: transparent; /* Ici, on enlève le jaune */
+}
+
+
+}
+#infos {
+	color:#ff007f;
+	font-style: italic;
+}
+#pied-de-page {
+	padding: 5px;
+	background-color: #000000;
+	font-size: 11px;
+}
+
+iframe { 
+	display: block; 
+	border: none; 
+	width: 90%; 		/* à définir et à ajuste */ 
+	margin: auto : 
+}
+	/*créer des commandes pour lancer /arrêter de la musique*/
+.bouton {
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	font-weight: 400;
+	color:#ff007f;
+	font-size:4rem;
+	line-height:2em;
+}
+
+.bouton.active {
+color:#08c5f3;
+}
+/*mettre une image aux bords arrondis*/
+
+.arrondie {
+    height: auto;
+    border-radius: 20px;
+    border: #ff007f;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.2);
+    /* On enlève le float et le display block car le flexbox s'en occupe */
+}
+/* FORCE LA COULEUR ROSE SUR LES LIENS DU MENU */
+#bloc-menu a, 
+#bloc-menu a:link, 
+#bloc-menu a:visited {
+    color: #ff007f !important;
+    text-decoration: none!important;
+} 
+/* Ce code force TOUTES les listes et les textes à devenir Roses */
+li, p, span {
+    color: #ff007f !important;
+}
+
+
+/* OPTIONNEL : CHANGE AUSSI LA COULEUR DU TEXTE SI CE N'EST PAS UN LIEN */
+#bloc-menu {
+    color: #ff007f !important;
+}
+h1 {
+    color: #ff007f !important; /* Ton Rose Néon */
+    text-shadow: 0 0 10px #ff007f; /* Pour que ça brille */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+#bloc-menu th {
+    font-size: 10px; /* On réduit la taille pour que ça rentre */
+    padding: 5px;   /* On réduit l'espace autour des mots */
+}
+
