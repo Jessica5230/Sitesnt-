@@ -1,84 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
- 
 <head>
-<title> Site de Jessica </title>
-<meta charset="utf-8" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Mes Racines, Mes Rêves</title>
+    <style>
+        /* STYLE DU MENU DÉROULANT */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 350px;
+            margin-top: 20px;
+        }
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+        .dropbtn {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            border: 2px solid #007fff; /* Bordure bleue pour rappeler le Congo */
+            border-radius: 12px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0px 4px 15px rgba(0, 127, 255, 0.2);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #111;
+            width: 100%;
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.8);
+            z-index: 1;
+            border-radius: 0 0 12px 12px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 18px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #222;
+            font-size: 18px;
+        }
+
+        /* Effet au clic/survol */
+        .dropdown-content a:hover { background-color: #007fff; color: white; }
+        .dropdown:active .dropdown-content, .dropdown:focus-within .dropdown-content { display: block; }
+    </style>
 </head>
-<body>
-<div id="entete-de-page"> 
-<p> Accueil <br/> </p>
-</div> 
-<table id="bloc-menu" border="1">
-<tr>
-<th><a href="index.html"> Accueil </a></th>
-<th><a href="productions.html">Productions scolaires</a></th>
-<th><a href="passions.html">Mes passions</a></th>
-<th><a href="Videos.html">Mes vidéos</a></th>
-<th><a href="reve/index.html">Mon site de rêve</a></th>
+<body style="background: #000; color: white; font-family: 'Arial', sans-serif; margin: 0; padding: 50px 25px; text-align: center;"> 
+<body style="background-color: #000000; text-align: center;">
 
-</tr>
-</table> <br/> 
-<div class="presentation">
-  <img src="image.png" alt="ceci est mon avatar" class="arrondie">
-  <div class="texte-presentation">
-   <h2>Je me présente je m'appelle Jessica j'aurai bientot 16 ans je suis née le 05/03/2010 je suis d'origine congolaise🇨🇩 guyanaise🇬🇫 et jamaïcaine🇯🇲 je suis une  personne gentille joyeuse qui aime rigoler profiter de la vie et voila!</h2>
-  </div> 
-                </div>
-	<div>
-	<!--on ajoute le lien où se trouve la musique -->
-<audio  id="zic"src="music.mp3"></audio>
-<!--on nomme les boutons et leur statut -->
-<div>
-<a href="javascript:void(0)" onclick="changeState(0)" class="bouton">PLAY</a>
-<a href="javascript:void(0)" onclick="changeState(1)" class="bouton">PAUSE</a>
-<a href="javascript:void(0)" onclick="changeState(2)" class="bouton active">STOP</a>
-</div>
-<!--on écrit les variable du script -->
-<script>
-<!--on attribue valeur et fonction de chaque bouton -->
-function changeState(x){
-let boutons = document.querySelectorAll(".bouton");
-let audio = document.querySelector("#zic");
-for(let i =0; i<boutons.length; i++){
-boutons[i].classList.remove("active");
-}
-boutons[x].classList.add("active");
-if(x == 0){
-audio.play();
-}
-if(x == 1){
-audio.pause();
-}
-if(x == 2){
-audio.pause();
-audio.currentTime = 0;
-}
-}
-</script></div>
-
-<hr>
-<div id="infos">
-<h3> A lire aussi: <a href="Site.html">Mon site de rêve</a></h3>
-<ul>
-<li> Lien vers un site </li>
-<li> Lien vers un site </li>
-</ul>
-</div>
-</div> <br/> 
-<div id="pied-de-page">
-<p> Projet SNT - Dernière mise à jour : 15/12/2025 <br/>
-
-		Les textes et images utilisés n'engagent que son auteur : Delph </p>
-</div> <br/>
- 
+   <table id="bloc-menu" border="1" style="width: 100%; border-color: #ff007f; margin-bottom: 30px; border-collapse: collapse;">
+    <tr>
+        <th style="padding: 5px;"><a href="index.html" style="color: #ff007f; text-decoration: none; font-size: 15px;">Accueil</a></th>
+        <th style="padding: 5px;"><a href="productions.html" style="color: #ff007f; text-decoration: none; font-size: 15px;">Productions scolaire</a></th>
+        <th style="padding: 5px;"><a href="passions.html" style="color: #ff007f; text-decoration: none; font-size: 15px;">Mes passions</a></th>
+        <th style="padding: 5px;"><a href="Videos.html" style="color: #ff007f; text-decoration: none; font-size: 15px;">Mes vidéos</a></th>
+        <th style="padding: 5px;"><a href="reve/index.html" style="color: #ff007f; text-decoration: none; font-size: 15px;">Mon site de rêve</a></th>
+    </tr>
+</table>
 </body>
- 
-</html> 
 
- 
+
+    <h1 style="font-size: 42px; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 10px; color: #fff;">
+        MES RACINES
+    </h1>
+    <h2 style="font-size: 30px; color: #fed100; margin-top: 0; letter-spacing: 2px; font-weight: 300; margin-bottom: 50px;">
+        MES RÊVES
+    </h2>
+
+    <div style="line-height: 1.8; font-size: 24px; text-align: left; max-width: 600px; margin: 0 auto 50px auto; color: #ececec;">
+        <p>
+            Bienvenue dans mon site de rêve. Dans cette page, je compte vous faire découvrir mes pays d'origine qui me tiennent à cœur : 
+            <span style="color: #007fff; font-weight: bold;">Congo Kinshasa</span> et la 
+            <span style="color: #fed100; font-weight: bold;">Jamaïque</span>. 
+        </p>
+        <p style="margin-top: 25px; font-size: 19px; color: #888; font-style: italic;">
+            Je compte vous faire voyager avec moi en appuyant sur : 
+            <br><span style="color: #fff; font-style: normal; font-weight: bold;">"Choisissez votre destination en appuyant sur le menu ci-dessous"</span>.
+        </p>
+    </div>
+
+    <div class="dropdown" tabindex="0">
+        <button class="dropbtn">DESTINATIONS ▼</button>
+        <div class="dropdown-content">
+            <a href="Congo.html">🇨🇩 CONGO (RDC)</a>
+            <a href="Jamaïque.html">🇯🇲 JAMAÏQUE</a>
+            <a href="../index.html" style="color: #ff4444; font-size: 15px;">⬅ RETOUR ACCUEIL</a>
+        </div>
+</body>
+
+
+</html>

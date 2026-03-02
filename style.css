@@ -1,136 +1,109 @@
-iframe {
-	
-height:100vh;
-width:100%;
-}
 body {
-	margin: 0;
-	padding: 0;
-	background-color: #000000;
-	body {
-    background-color: #000000;
-    color: #ff007f;
+    background-color: #000033; /* Remplace ton ancienne couleur par celle-ci */
+    color: white; /* Garde le texte blanc par défaut pour qu'il se voit */
 }
 
-	font-family: Arial, sans-serif;
-	font-size: 16px;
+/* Le conteneur du Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
 }
-.presentation {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+/* Le bouton MENU principal - VERSION LARGE */
+.dropbtn {
+    background-color: #333;
+    color: ff007f;
+    padding: 20px;       /* Plus d'espace à l'intérieur */
+    font-size: 28px;     /* Texte plus grand */
+p {
+    color: #fed100;
+    font-size: 18px;
 }
-
-.presentation img {
-  width: 120px;   /* plus fiable que % ici */
-  height: auto;
-}
-
-.texte-presentation {
-  flex: 1;
-  color:#ff007f;
-}
-/*Vous pouvez modifier la couleur de .texte de présentation*/
-th { width: 200px;}
-ul { list-style-type: square; }
-
-#entete-de-page {
-	padding: 5px;
-	height: 100px;
-	background-color:#000000;
-	font-size: 32px;
-	font-weight: bold;
-	font-variant: small-caps;
-	text-align: center;
-}
-#bloc-menu {
-    height: 36px;
-    background-color: #000000;
-    float: center; /* Attention, float: center n'existe pas vraiment, mais on garde ton code */
-    text-align: center; /* Ajoute ça pour centrer tes textes */
-}
-
-/* C'EST CETTE PARTIE QUI CHANGE LA COULEUR DES LIENS DU MENU */
-#bloc-menu a {
-    color: #ff007f !important; /* Ton rose flashy */
-    text-decoration: none;
-    margin: 0 10px; /* Espace un peu les noms du menu */
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
     font-weight: bold;
+    width: 80%;          /* ICI : Il prend 80% de la largeur de l'écran */
+    max-width: 600px;    /* Mais il ne dépasse pas 600px pour rester beau */
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3); /* Un peu d'ombre pour le style */
 }
 
-}
-#contenu {
-    overflow: hidden; /* Important pour que l'image ne dépasse pas du bloc */
-    padding: 20px;
-    background-color: transparent; /* Ici, on enlève le jaune */
-}
-
-
-}
-#infos {
-	color:#ff007f;
-	font-style: italic;
-}
-#pied-de-page {
-	padding: 5px;
-	background-color: #000000;
-	font-size: 11px;
+/* On ajuste la boîte qui descend pour qu'elle soit aussi large que le bouton */
+.dropdown {
+    position: relative;
+    display: block;      /* On le met en bloc pour qu'il soit centré */
+    margin: 30px auto;   /* Centré avec de l'espace en haut */
+    width: 100%;
 }
 
-iframe { 
-	display: block; 
-	border: none; 
-	width: 90%; 		/* à définir et à ajuste */ 
-	margin: auto : 
-}
-	/*créer des commandes pour lancer /arrêter de la musique*/
-.bouton {
-	display:block;
-	text-align:center;
-	text-decoration:none;
-	font-weight: 400;
-	color:#ff007f;
-	font-size:4rem;
-	line-height:2em;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 80%;          /* Même largeur que le bouton */
+    max-width: 600px;
+    left: 50%;           /* On le centre */
+    transform: translateX(-50%);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.bouton.active {
-color:#08c5f3;
-}
-/*mettre une image aux bords arrondis*/
-
-.arrondie {
-    height: auto;
-    border-radius: 20px;
-    border: #ff007f;
-    box-shadow: 0px 8px 15px rgba(0,0,0,0.2);
-    /* On enlève le float et le display block car le flexbox s'en occupe */
-}
-/* FORCE LA COULEUR ROSE SUR LES LIENS DU MENU */
-#bloc-menu a, 
-#bloc-menu a:link, 
-#bloc-menu a:visited {
-    color: #ff007f !important;
-    text-decoration: none!important;
-} 
-/* Ce code force TOUTES les listes et les textes à devenir Roses */
-li, p, span {
-    color: #ff007f !important;
+.dropdown-content a {
+    color: black;
+    padding: 20px;       /* Liens plus grands aussi */
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
 }
 
 
-/* OPTIONNEL : CHANGE AUSSI LA COULEUR DU TEXTE SI CE N'EST PAS UN LIEN */
-#bloc-menu {
-    color: #ff007f !important;
-}
-h1 {
-    color: #ff007f !important; /* Ton Rose Néon */
-    text-shadow: 0 0 10px #ff007f; /* Pour que ça brille */
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-#bloc-menu th {
-    font-size: 10px; /* On réduit la taille pour que ça rentre */
-    padding: 5px;   /* On réduit l'espace autour des mots */
+/* La boîte qui contient les liens (cachée par défaut) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
 }
 
+/* Les liens à l'intérieur du menu qui descend */
+.dropdown-content a {
+    color: black;
+    padding: 25px;       /* Plus d'espace autour du texte */
+    text-decoration: none;
+    display: block;
+    font-size: 30px;     /* ÉCRITURE BIEN GRANDE ICI */
+    font-weight: bold;   /* En gras pour que ça ressorte bien */
+    border-bottom: 1px solid #ddd; /* Une petite ligne entre chaque pays */
+}
+
+/* Pour le dernier lien, on enlève la ligne du bas */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #F527EE; /* Le rose flash au survol */
+    color: white;
+}
+
+/* Affiche le menu quand on survole */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Animation qui fait bouger doucement le bouton */
+@keyframes battement {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); box-shadow: 0px 0px 20px rgba(245, 39, 238, 0.5); }
+    100% { transform: scale(1); }
+}
+
+.dropbtn {
+    /* ... garde ton ancien code ici et ajoute juste la ligne en dessous ... */
+    animation: battement 2s infinite ease-in-out;
+    border: 2px solid white; /* Un petit contour pour qu'il brille */
+}
